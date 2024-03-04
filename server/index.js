@@ -6,7 +6,7 @@ import schema from "./schema/schema.js";
 import connectDB from "./config/db.js";
 
 const app = express();
-dotenv.config({ path: "./.env.development" });
+dotenv.config(); // add .env file path
 // connect to DB
 connectDB();
 
