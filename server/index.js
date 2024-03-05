@@ -13,9 +13,9 @@ connectDB();
 app.use(
   cors({
     origin: {
-      local: "http://localhost:3000",
-      prod: ["https://react-graphql-node-mongo-app.onrender.com"],
-    },
+      development: "http://localhost:3000",
+      production: "http://localhost:3000",
+    }[process.env.NODE_ENV],
   })
 );
 
