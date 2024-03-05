@@ -6,16 +6,14 @@ import schema from "./schema/schema.js";
 import connectDB from "./config/db.js";
 
 const app = express();
-dotenv.config(); // add .env file path
+dotenv.config(); // add .env file path. if any
 // connect to DB
 connectDB();
 
 app.use(
   cors({
-    origin: {
-      development: "http://localhost:3000",
-      production: "http://localhost:3000",
-    }[process.env.NODE_ENV],
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST", "DELETE", "PUT"],
   })
 );
 
