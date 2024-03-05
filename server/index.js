@@ -11,13 +11,14 @@ dotenv.config(); // add .env file path
 connectDB();
 
 const corsOptions = {
-  origin: "https://react-graphql-node-mongo-app.onrender.com/graphql", // Change this to the specific origin of your React app in production
+  origin: "http://localhost:3000", // Change this to the specific origin of your React app in production
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   preflightContinue: false,
   optionsSuccessStatus: 204,
   allowedHeaders: "Content-Type, Authorization", // Add any additional headers you need
   // credentials: true, // Set this to true if your client sends credentials (e.g., cookies)
 };
+
 app.use(cors(corsOptions));
 
 app.use(
