@@ -10,7 +10,15 @@ dotenv.config(); // add .env file path
 // connect to DB
 connectDB();
 
-app.use(cors());
+const corsOptions = {
+  origin: "*", // Change this to the specific origin of your React app in production
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
+  allowedHeaders: "Content-Type, Authorization", // Add any additional headers you need
+  // credentials: true, // Set this to true if your client sends credentials (e.g., cookies)
+};
+app.use(cors(corsOptions));
 
 app.use(
   "/graphql",
