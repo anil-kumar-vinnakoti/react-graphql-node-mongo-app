@@ -13,9 +13,9 @@ connectDB();
 const corsOptions = {
   origin: "http://localhost:3000", // Change this to the specific origin of your React app in production
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  preflightContinue: false,
-  optionsSuccessStatus: 204,
-  allowedHeaders: "Content-Type, Authorization", // Add any additional headers you need
+  // preflightContinue: false,
+  // optionsSuccessStatus: 204,
+  // allowedHeaders: "Content-Type, Authorization", // Add any additional headers you need
   // credentials: true, // Set this to true if your client sends credentials (e.g., cookies)
 };
 
